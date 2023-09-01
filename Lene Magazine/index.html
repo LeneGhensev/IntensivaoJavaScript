@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section
+      id="carrinho" class="fixed top-0 right-[0px] bg-neutral-950 h-screen w-[250px] text-white"
+    >
+      <div id="cabecalho-carrinho" class="flex justify-between m-4 text-pink-600">
+        <p>Meu carrinho</p>
+        <button id="fechar-carrinho">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+      <section id="produtos-carrinho">
+        <p>Camisa Larga com Bolsos</p>
+        <p>Sobretudo em Mescla de Lã</p>
+        <p>Casaco com Botões</p>
+      </section>
+      <p id="preco-total">TOTAL R$200</p>
+      <button class="bg-pink-600 text-slate-900 p-1">Finalizar Compra</button>
+    </section>
+    <header class="flex bg-neutral-950 p-2 justify-between">
+      <img
+        class="h-16"
+        src="./assets/logo/logoLene.png"
+        alt="Logo da empresa Lene Magazine."
+      />
+      <div class="text-white flex gap-2 items-end mx-2">
+        <button id="abrir-carrinho"> Carrinho
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button>Usuário<i class="fa-solid fa-user"></i></button>
+      </div>
+    </header>
+    <main>
+      <section id="container-produto" class="flex flex-wrap"></section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
