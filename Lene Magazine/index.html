@@ -15,7 +15,7 @@
   </head>
   <body>
     <section
-      id="carrinho" class="fixed top-0 right-[0px] bg-neutral-950 h-screen w-[250px] text-white"
+      id="carrinho" class="fixed top-0 right-[-320px] bg-neutral-950 h-screen w-[320px] text-white z-50 duration-200 border-l border-pink-600 p-5 flex flex-col justify-between"
     >
       <div id="cabecalho-carrinho" class="flex justify-between m-4 text-pink-600">
         <p>Meu carrinho</p>
@@ -24,28 +24,24 @@
         </button>
       </div>
       <section id="produtos-carrinho">
-        <p>Camisa Larga com Bolsos</p>
-        <p>Sobretudo em Mescla de Lã</p>
-        <p>Casaco com Botões</p>
       </section>
       <p id="preco-total">TOTAL R$200</p>
       <button class="bg-pink-600 text-slate-900 p-1">Finalizar Compra</button>
     </section>
-    <header class="flex bg-neutral-950 p-2 justify-between">
+    <header class="flex bg-neutral-950 shadow-xl shadow-slate-400 px-8 py-4 justify-between sticky top-0 z-10">
       <img
         class="h-16"
         src="./assets/logo/logoLene.png"
         alt="Logo da empresa Lene Magazine."
       />
       <div class="text-white flex gap-2 items-end mx-2">
-        <button id="abrir-carrinho"> Carrinho
-          <i class="fa-solid fa-cart-shopping"></i>
+        <button id="abrir-carrinho" class="mx-2"> Carrinho <i class="fa-solid fa-cart-shopping"></i>
         </button>
-        <button>Usuário<i class="fa-solid fa-user"></i></button>
+        <button  class="mr-2"> Usuário <i class="fa-solid fa-user"></i></button>
       </div>
     </header>
     <main>
-      <section id="container-produto" class="flex flex-wrap"></section>
+      <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10"></section>
     </main>
     <script type="module" src="./main.js"></script>
   </body>
