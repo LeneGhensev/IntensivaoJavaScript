@@ -13,34 +13,73 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
-    <section
-      id="carrinho" class="fixed top-0 right-[-320px] bg-neutral-950 h-screen w-[320px] text-white z-50 duration-200 border-l border-pink-600 p-5 flex flex-col justify-between"
-    >
+  <body class="bg-stone-200 flex flex-col">
+    <section id="carrinho" class="fixed top-0 right-[-360px] bg-slate-950 h-screen w-[360px] text-slate-200 z-50 duration-200 border-l border-pink-600 p-5 flex flex-col justify-between">
       <div id="cabecalho-carrinho" class="flex justify-between m-4 text-pink-600">
         <p>Meu carrinho</p>
-        <button id="fechar-carrinho">
+        <button id="fechar-carrinho"> 
           <i class="fa-solid fa-circle-xmark"></i>
         </button>
       </div>
-      <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-3">
-      </section>
-      <p id="preco-total">TOTAL R$200</p>
-      <button class="bg-pink-600 text-slate-900 p-1">Finalizar Compra</button>
+      <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-3"></section>
+      <p id="preco-total" class="bg-slate-200 text-green-800 rounded-sm pl-5"> TOTAL: </p>
+      <button class="bg-pink-600 text-slate-900 p-1 hover:bg-slate-200 hover:text-pink-600" id="finalizar-compra"> Finalizar Compra </button> 
     </section>
-    <header class="flex bg-neutral-950 shadow-xl shadow-slate-400 px-8 py-4 justify-between sticky top-0 z-10">
-      <img
-        class="h-16"
-        src="./assets/logo/logoLene.png"
-        alt="Logo da empresa Lene Magazine."
-      />
+    <header class="flex bg-neutral-950 shadow-xl shadow-slate-400 px-8 py-4 justify-between sticky top-0 z-10"> 
+      <a href="./">
+        <img class="h-16" src="./assets/logo/logoLene.png" alt="Logo da Lene Magazine."/>
+      </a>
       <div class="text-white flex gap-2 items-end mx-2">
-        <button id="abrir-carrinho" class="mx-2"> Carrinho <i class="fa-solid fa-cart-shopping"></i>
+        <button id="abrir-carrinho" class="mx-2 text-pink-600"> Carrinho <i class="fa-solid fa-cart-shopping"></i>
         </button>
-        <button  class="mr-2"> Usuário <i class="fa-solid fa-user"></i></button>
+        <a href="./pedidos.html">
+          <button class="mr-2 text-pink-600"> Usuário <i class="fa-solid fa-user"></i></button>
+        </a>
       </div>
     </header>
-    <main>
+    <main class="flex flex-col items-center">
+      <section id="filtros" class="p-10 flex">
+        <div class="px-2">
+          <input 
+            id="exibir-todos"
+            type="radio" 
+            name="filtro"
+            class="peer hidden"
+            checked
+          />
+          <label
+            for="exibir-todos"
+            class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer"
+            >Todos</label
+          >
+        </div>
+        <div class="px-2">
+          <input
+            id="exibir-masculinos"
+            type="radio"
+            name="filtro"
+            class="peer hidden"
+          />
+          <label
+            for="exibir-masculinos"
+            class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer"
+            >Masculinos</label
+          >
+        </div>
+        <div class="px-2">
+          <input
+            id="exibir-femininos"
+            type="radio"
+            name="filtro"
+            class="peer hidden"
+          />
+          <label
+            for="exibir-femininos"
+            class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer"
+            >Femininos</label
+          >
+        </div>
+      </section>
       <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10"></section>
     </main>
     <script type="module" src="./main.js"></script>

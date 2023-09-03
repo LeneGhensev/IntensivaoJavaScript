@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-stone-200 flex flex-col h-screen">
+    <header class="flex text-xl bg-slate-950 shadow-xl shadow-slate-400 px-8 py-4 justify-between sticky top-0 z-10">
+      <a href="./">
+        <img class="h-16" src="./assets/logo/logoLene.png" alt="Logo da Lene Magazine."/>
+      </a>
+    </header>
+    <form class="flex w-100 px-5 gap-4 py-10 grow">
+      <section id="dados-usuario" class="w-1/3 bg-white rounded-lg py-5">
+        <p class="text-pink-600 mb-5 text-center font-bold">Seus Dados</p>
+        <div class="flex flex-col px-10 py-3">
+          <label for="nome" class="font-bold text-sm mb-2">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            class="rounded-sm px-2 border-2 border-slate-200 py-1"
+            placeholder="Insira seu nome completo"
+            required
+          />
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="email" class="font-bold text-sm mb-2">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            class="rounded-sm px-2 border-2 border-slate-200 py-1"
+            placeholder="seu.email@exemplo.com.br"
+            required
+          />
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="nome" class="font-bold text-sm mb-2">Telefone de Contato</label>
+          <input
+            type="tel"
+            id="nome"
+            class="rounded-sm px-2 border-2 border-slate-200 py-1"
+            placeholder="(11) 99999-9999"
+            required
+          />
+        </div>
+      </section>
+      <section id="pagamento-entrega" class="w-1/3 bg-white rounded-lg py-5">
+        <p class="text-pink-600 mb-5 text-center font-bold">Pagamento e Entrega</p>
+        <div class="flex flex-col px-10 py-3">
+          <label for="numero-cartao" class="font-bold text-sm mb-2">Numero do Cartão</label>
+          <input
+            type="text"
+            id="numero-cartao"
+            class="rounded-sm px-2 border-2 border-slate-200 py-1"
+            placeholder="1111 1111 1111 1111"
+            required
+          />
+        </div>
+        <div class="flex">
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="cvv" class="font-bold text-sm mb-2">CVV</label>
+            <input
+              type="text"
+              id="cvv"
+              class="rounded-sm px-2 border-2 border-slate-200 py-1"
+              placeholder="222"
+              required
+            />
+          </div>
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="data-expiracao" class="font-bold text-sm mb-2">Data de Validade</label>
+            <input
+              type="text"
+              id="data-expiracao"
+              class="rounded-sm px-2 border-2 border-slate-200 py-1"
+              placeholder="09/23"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="cep" class="font-bold text-sm mb-2">CEP</label>
+          <input
+            type="text"
+            id="cep"
+            class="rounded-sm px-2 border-2 border-slate-200 py-1"
+            placeholder="12345-000"
+            required
+          />
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="endereco" class="font-bold text-sm mb-2">Endereço</label>
+          <input
+            type="text"
+            id="endereco"
+            class="rounded-sm px-2 border-2 border-slate-200 py-1"
+            placeholder="Insira o Logradouro"
+            required
+          />
+        </div>
+        <div class="flex">
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="numero" class="font-bold text-sm mb-2">Número</label>
+            <input
+              type="text"
+              id="numero"
+              class="rounded-sm px-2 border-2 border-slate-200 py-1"
+              placeholder="111"
+              required
+            />
+          </div>
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="complemento" class="font-bold text-sm mb-2">Complemento</label>
+            <input
+              type="text"
+              id="complemento"
+              class="rounded-sm px-2 border-2 border-slate-200 py-1"
+              placeholder="000"
+              required
+            />
+          </div>
+        </div>
+      </section>
+      <section id="produtos-checkout" class="w-1/3 bg-white rounded-lg py-5">
+        <p class="text-pink-600 mb-5 text-center font-bold">Produtos</p>
+        <section id="container-produtos-checkout" class="h-3/5 overflow-y-auto px-2 flex flex-col items-center"></section>
+        <section id="celula-checkout" class="flex flex-col px-2 h-2/5 justify-around">
+          <p id="preco-total" class="bg-slate-200 text-green-800 rounded-lg pl-5"> TOTAL: R$200 </p>
+          <button class="bg-pink-600 text-slate-200 p-1 hover:bg-slate-800" type="submit" id="finalizar-compra-checkout"> Finalizar Compra </button>
+        </section>
+      </section>
+    </form>
+    <script src="./checkout.js" type="module"></script>
+  </body>
+</html>
